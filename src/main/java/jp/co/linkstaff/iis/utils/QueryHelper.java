@@ -13,22 +13,20 @@ public class QueryHelper {
     	String result = "";
     	switch(queryType) {
     	   case OperationType.LIKE:
-    		   //result =" OR (";
+    		
     		   for(String st:qArray) {
     			   if(st != null)
    				   result +=  st ;
     		   }
-    		   //result = result.substring(0, result.length()-3);
-    		   //result += ")";
     		   break;
            case OperationType.IN:
-        	   //result = " (";
+        	   
         	   for(String st:qArray) {
         		   if(st != null)
         			   result += "'"+ st +"'" + ",";
     		   }
         	   result = result.substring(0, result.length()-1);
-        	   //result += ")";
+        	   
     		   break;
            case OperationType.EQUALS:
         	   result =" OR "+ column+ " =";

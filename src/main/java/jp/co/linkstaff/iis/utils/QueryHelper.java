@@ -33,8 +33,6 @@ public class QueryHelper {
         	   for(String st:qArray) {
     			   result += st;
     		   }
-//        	   result = result.substring(0, result.length()-1);
-//        	   result += ")";
     		   break;
            case OperationType.TSVECTOR:
         	   for(String st:qArray) {
